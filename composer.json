@@ -1,0 +1,15 @@
+{
+  "name": "endelwar/mysqlcurrenttimestamp",
+  "description": "test currentimestamp on different mysql version",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Manuel Dalla Lana",
+      "email": "endelwar@aregar.it"
+    }
+  ],
+  "require": {
+    "doctrine/dbal": "^2.6"
+  }
+}

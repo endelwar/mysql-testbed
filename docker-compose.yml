@@ -1,0 +1,95 @@
+version: '3'
+services:
+  mysql55:
+    image: "mysql:5.5"
+    ports:
+      - "55055:3306"
+    volumes:
+      - db_data:/var/lib/mysql55
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mailwatch
+      MYSQL_USER: mailwatch
+      MYSQL_PASSWORD: mailwatch
+  mysql56:
+    image: "mysql:5.6"
+    ports:
+      - "55056:3306"
+    volumes:
+      - db_data:/var/lib/mysql56
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mailwatch
+      MYSQL_USER: mailwatch
+      MYSQL_PASSWORD: mailwatch
+  mysql57:
+    image: "mysql:5.7"
+    ports:
+      - "55057:3306"
+    volumes:
+      - db_data:/var/lib/mysql57
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mailwatch
+      MYSQL_USER: mailwatch
+      MYSQL_PASSWORD: mailwatch
+  mysql80:
+    image: "mysql:8.0"
+    ports:
+      - "55080:3306"
+    volumes:
+      - db_data:/var/lib/mysql80
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mailwatch
+      MYSQL_USER: mailwatch
+      MYSQL_PASSWORD: mailwatch
+
+  mariadb55:
+    image: "mariadb:5.5"
+    ports:
+      - "51055:3306"
+    volumes:
+      - db_data:/var/lib/mariadb101
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mailwatch
+      MYSQL_USER: mailwatch
+      MYSQL_PASSWORD: mailwatch
+  mariadb101:
+    image: "mariadb:10.1"
+    ports:
+      - "51101:3306"
+    volumes:
+      - db_data:/var/lib/mariadb101
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mailwatch
+      MYSQL_USER: mailwatch
+      MYSQL_PASSWORD: mailwatch
+  mariadb102:
+    image: "mariadb:10.2"
+    ports:
+      - "51102:3306"
+    volumes:
+      - db_data:/var/lib/mariadb102
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mailwatch
+      MYSQL_USER: mailwatch
+      MYSQL_PASSWORD: mailwatch
+  mariadb103:
+    image: "mariadb:10.3"
+    ports:
+      - "51103:3306"
+    volumes:
+      - db_data:/var/lib/mariadb103
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mailwatch
+      MYSQL_USER: mailwatch
+      MYSQL_PASSWORD: mailwatch
+
+
+volumes:
+    db_data:
