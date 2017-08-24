@@ -115,8 +115,8 @@ foreach ($connectionParams as $version => $connectionParam) {
         $before = $conn[$version]->executeQuery($sql_show)->fetchAll();
         echo 'Before -> Default=' . $before[0]['Default'] . ' - Extra:' . $before[0]['Extra'] . PHP_EOL;
 
-        //$sql = "ALTER TABLE `maillog` CHANGE `timestamp` `timestamp` TIMESTAMP NOT NULL DEFAULT 0";
-        $sql_1 = "ALTER TABLE `maillog` CHANGE `timestamp` `timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP";
+        $sql_1 = "ALTER TABLE `maillog` CHANGE `timestamp` `timestamp` TIMESTAMP NOT NULL DEFAULT 0";
+        //$sql_1 = "ALTER TABLE `maillog` CHANGE `timestamp` `timestamp` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP";
         $conn[$version]->executeQuery($sql_1);
 
         $middle = $conn[$version]->executeQuery($sql_show)->fetchAll();
@@ -128,7 +128,7 @@ foreach ($connectionParams as $version => $connectionParam) {
         $after = $conn[$version]->executeQuery($sql_show)->fetchAll();
         echo 'After  -> Default=' . $after[0]['Default'] . ' - Extra:' . $after[0]['Extra'] . PHP_EOL;
     } catch (Exception $e) {
-        echo $version . ': non funziona [' . $e->getMessage() . ']' . PHP_EOL;
+        echo $version . ': doesn\'t work funziona [' . $e->getMessage() . ']' . PHP_EOL;
     }
 
     echo '------------------------------------------' . PHP_EOL;
