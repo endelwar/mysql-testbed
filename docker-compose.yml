@@ -56,6 +56,17 @@ services:
       MYSQL_DATABASE: mailwatch
       MYSQL_USER: mailwatch
       MYSQL_PASSWORD: mailwatch
+  mariadb100:
+    image: "mariadb:10.0"
+    ports:
+      - "51100:3306"
+    volumes:
+      - db_data:/var/lib/mariadb101
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mailwatch
+      MYSQL_USER: mailwatch
+      MYSQL_PASSWORD: mailwatch
   mariadb101:
     image: "mariadb:10.1"
     ports:

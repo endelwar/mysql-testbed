@@ -24,6 +24,9 @@ $connectionParams['mysql80'] = array(
 $connectionParams['mariadb55'] = array(
     'url' => 'mysql://mailwatch:mailwatch@127.0.0.1:51055/mailwatch',
 );
+$connectionParams['mariadb100'] = array(
+    'url' => 'mysql://mailwatch:mailwatch@127.0.0.1:51100/mailwatch',
+);
 $connectionParams['mariadb101'] = array(
     'url' => 'mysql://mailwatch:mailwatch@127.0.0.1:51101/mailwatch',
 );
