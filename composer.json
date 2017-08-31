@@ -1,5 +1,5 @@
 {
-  "name": "endelwar/mysqlcurrenttimestamp",
+  "name": "endelwar/mysqltestbed",
   "description": "test currentimestamp on different mysql version",
   "minimum-stability": "stable",
   "license": "MIT",
