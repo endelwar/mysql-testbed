@@ -1,7 +1,10 @@
 #!/bin/bash
 
-docker-compose up -d
+__DIR__="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
 
-php runtest.php
+#docker-compose pull
 
-docker-compose down -v
+docker-compose up -d && \
+sleep 10 && \
+php ${__DIR__}/../src/runtest.php && \
+docker-compose down
